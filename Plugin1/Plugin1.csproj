@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin\Plugin.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cp ./bin/Debug/net5.0/Plugin1.dll ../Translator/Plugins/" />
+  </Target>
+
+</Project>
